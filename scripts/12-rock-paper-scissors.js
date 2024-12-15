@@ -91,28 +91,28 @@ document.body.addEventListener('keydown', (event) => {
 
 function playGame(playerMove) {
   const computerChoice = pickComputerMove();
-  if (playerMove === "Scissor") {
-    if (computerChoice === "Scissor") {
+  if (playerMove === "scissor") {
+    if (computerChoice === "scissor") {
       result = "Tie.";
-    } else if (computerChoice === "Rock") {
+    } else if (computerChoice === "rock") {
       result = "You Lose.";
-    } else if (computerChoice === "Paper") {
+    } else if (computerChoice === "paper") {
       result = "You Win.";
     }
-  } else if (playerMove === "Paper") {
-    if (computerChoice === "Paper") {
+  } else if (playerMove === "paper") {
+    if (computerChoice === "paper") {
       result = "Tie.";
-    } else if (computerChoice === "Scissor") {
+    } else if (computerChoice === "scissor") {
       result = "You Lose.";
-    } else if (computerChoice === "Rock") {
+    } else if (computerChoice === "rock") {
       result = "You Win.";
     }
-  } else if (playerMove === "Rock") {
-    if (computerChoice === "Rock") {
+  } else if (playerMove === "rock") {
+    if (computerChoice === "rock") {
       result = "Tie.";
-    } else if (computerChoice === "Paper") {
+    } else if (computerChoice === "paper") {
       result = "You Lose.";
-    } else if (computerChoice === "Scissor") {
+    } else if (computerChoice === "scissor") {
       result = "You Win.";
     }
   }
@@ -149,11 +149,11 @@ function pickComputerMove() {
   let computerChoice = "";
   const randomNumber = Math.random();
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerChoice = "Rock";
+    computerChoice = "rock";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerChoice = "Paper";
+    computerChoice = "paper";
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerChoice = "Scissor";
+    computerChoice = "scissor";
   }
   return computerChoice;
 }
